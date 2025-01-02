@@ -71,3 +71,26 @@ input:focus {
   border-radius: 20px;
   box-shadow: 1px 1px 2px 1px rgba(129, 129, 129, 0.308);
 }
+
+.gap{
+  margin: 40px 0px;
+}
+
+.task-item{
+  padding: 5px 10px;
+  display: flex;
+  justify-content: space-between;
+}
+.task-left, .task-right{
+  display: flex;
+  gap: 10px;
+}
+
+.complete-button{
+  width: 100%;
+  padding: 5px 5px;
+  background-color: rgb(255, 196, 0);
+  color: white;
+  border: none;
+  box-shadow: 1px 1px 2px 1px rgba(129, 129, 129, 0.308);
+}

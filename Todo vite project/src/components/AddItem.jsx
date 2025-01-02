@@ -1,33 +1,38 @@
 import { useState } from "react";
 
-function AddItem(){
+function AddItem({ setTasks, tasks }) {
     const [userInput, setUserInput] = useState("");
 
-    function handleChange(event){
+    function handleChange(event) {
         setUserInput(event.target.value);
-        console.log(userInput);
-         
     }
 
-    function handleClick(){
-         console.log("handled click");
-         setUserInput("");
+    function handleClick() {
+        if (userInput.trim() !== "") {
+            setTasks([...tasks, userInput]); // Update tasks state in App
+        }
+        setUserInput(""); // Clear input field
     }
 
-    return(
+    return (
         <div className="App-div">
-           <div>
-               <logo></logo>
-               <h2 className="add-heading">ADD ITEM</h2>
-           </div>
-           <hr></hr>
-           <p className="add-para">What do you want to do?</p>
-           <div className="input-button">
-               <input type="text" onChange={handleChange}></input>
-               <button className="create-button" onClick={handleClick}>Create</button>
-           </div>
+            <div>
+                <h2 className="add-heading">ADD ITEM</h2>
+            </div>
+            <hr />
+            <p className="add-para">What do you want to do?</p>
+            <div className="input-button">
+                <input
+                    type="text"
+                    onChange={handleChange}
+                    value={userInput}
+                />
+                <button className="create-button" onClick={handleClick}>
+                    Create
+                </button>
+            </div>
         </div>
-    )
+    );
 }
 
 export default AddItem;
