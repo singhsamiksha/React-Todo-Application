@@ -29,7 +29,7 @@ Make sure you have the following software installed:
 
 1. Clone the repository to your local machine: git clone https://github.com/your-username/React-Todo-Application.git
 
-2. Navigate to the project directory: cd todo-app
+2. Navigate to the project directory: cd React-Todo-Application
 
 3. Install the dependencies: npm install
 
