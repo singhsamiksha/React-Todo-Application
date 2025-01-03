@@ -4,7 +4,7 @@ function ToDoItem({ task, index, handleMarkComplete, handleEditTask, handleDelet
     };
 
     const handleEditClick = () => {
-        const newTask = prompt("Edit Task", task); // You can use a modal or other UI for editing
+        const newTask = prompt("Edit Task", task); 
         if (newTask) {
             handleEditTask(index, newTask); // Edit task in parent component
         }

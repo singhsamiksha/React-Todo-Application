@@ -37,6 +37,7 @@ function App() {
             <ToDoList tasks={tasks} handleMarkComplete={handleMarkComplete} handleEditTask={handleEditTask} handleDelete={handleDelete}/>
             <div className="gap"></div>
             <CompleteItem completedTasks={completedTasks} />
+            <div className="gap"></div>
         </div>
     );
 }
