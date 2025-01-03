@@ -27,7 +27,7 @@ Make sure you have the following software installed:
 
 ### Steps to Run the Application
 
-1. Clone the repository to your local machine: git clone https://github.com/your-username/todo-app.git
+1. Clone the repository to your local machine: git clone https://github.com/your-username/React-Todo-Application.git
 
 2. Navigate to the project directory: cd todo-app
 
