@@ -1,4 +1,4 @@
-export function Header(){
+function Header(){
     return(
         <div className="header-section">
            <h1 className="title">To-Do Application</h1>
@@ -6,3 +6,5 @@ export function Header(){
     )
 
 }
+
+export default Header;

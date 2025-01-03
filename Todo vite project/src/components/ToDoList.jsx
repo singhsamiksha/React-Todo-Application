@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({ tasks }) {
+function ToDoList({ tasks, handleMarkComplete }) {
     return (
         <div className="App-div">
             <div>
@@ -9,7 +9,12 @@ function ToDoList({ tasks }) {
             <hr />
             <div className="task-list">
                 {tasks.map((task, index) => (
-                    <ToDoItem key={index} task={task} />
+                    <ToDoItem
+                        key={index}
+                        task={task}
+                        index={index}
+                        handleMarkComplete={handleMarkComplete}
+                    />
                 ))}
             </div>
         </div>

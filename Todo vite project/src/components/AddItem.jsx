@@ -1,31 +1,29 @@
 import { useState } from "react";
 
-function AddItem({ setTasks, tasks }) {
+function AddItem({ addTask }) {
     const [userInput, setUserInput] = useState("");
 
-    function handleChange(event) {
+    const handleChange = (event) => {
         setUserInput(event.target.value);
-    }
+    };
 
-    function handleClick() {
+    const handleClick = () => {
         if (userInput.trim() !== "") {
-            setTasks([...tasks, userInput]); // Update tasks state in App
+            addTask(userInput); // Add task to the list
+            setUserInput("");
         }
-        setUserInput(""); // Clear input field
-    }
+    };
 
     return (
         <div className="App-div">
-            <div>
-                <h2 className="add-heading">ADD ITEM</h2>
-            </div>
+            <h2 className="add-heading">ADD ITEM</h2>
             <hr />
             <p className="add-para">What do you want to do?</p>
             <div className="input-button">
                 <input
                     type="text"
-                    onChange={handleChange}
                     value={userInput}
+                    onChange={handleChange}
                 />
                 <button className="create-button" onClick={handleClick}>
                     Create
