@@ -1,15 +1,18 @@
-function ToDoItem({ task, index, handleMarkComplete }) {
+function ToDoItem({ task, index, handleMarkComplete, handleEditTask, handleDelete }) {
     const handleButtonClick = () => {
         handleMarkComplete(index); // Move the task to completed
     };
 
     const handleEditClick = () => {
-        handleEditTask(index);
-    }
+        const newTask = prompt("Edit Task", task); // You can use a modal or other UI for editing
+        if (newTask) {
+            handleEditTask(index, newTask); // Edit task in parent component
+        }
+    };
 
     const handleDeleteClick = () => {
-        handleDeleteClick(index);
-    }
+        handleDelete(index); // Delete task in parent component
+    };
 
     return (
         <div className="task-item">

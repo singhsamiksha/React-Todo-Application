@@ -1,6 +1,6 @@
 import ToDoItem from "./ToDoItem";
 
-function ToDoList({ tasks, handleMarkComplete }) {
+function ToDoList({ tasks, handleEditTask, handleDelete, handleMarkComplete }) {
     return (
         <div className="App-div">
             <div>
@@ -13,6 +13,8 @@ function ToDoList({ tasks, handleMarkComplete }) {
                         key={index}
                         task={task}
                         index={index}
+                        handleEditTask={handleEditTask}
+                        handleDelete={handleDelete}  // Use handleDelete here
                         handleMarkComplete={handleMarkComplete}
                     />
                 ))}
